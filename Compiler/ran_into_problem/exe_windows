@@ -1,0 +1,55 @@
+Execution error: {
+  error: Error: Command failed: g++ C:\Users\sidrah\The_Real_OJ\Compiler\codes\4b9ae81a-e2f6-4a6a-bace-0c2ac6204795.cpp -o C:\Users\sidrah\The_Real_OJ\Compiler\outputs\4b9ae81a-e2f6-4a6a-bace-0c2ac6204795.exe && cd C:\Users\sidrah\The_Real_OJ\Compiler\outputs && ./4b9ae81a-e2f6-4a6a-bace-0c2ac6204795.exe   
+  '.' is not recognized as an internal or external command,
+  operable program or batch file.
+
+      at genericNodeError (node:internal/errors:983:15) 
+      at wrappedFn (node:internal/errors:537:14)        
+      at ChildProcess.exithandler (node:child_process:421:12)
+      at ChildProcess.emit (node:events:520:28)
+      at maybeClose (node:internal/child_process:1105:16)
+      at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+    code: 1,
+    killed: false,
+    signal: null,
+    cmd: 'g++ C:\\Users\\sidrah\\The_Real_OJ\\Compiler\\codes\\4b9ae81a-e2f6-4a6a-bace-0c2ac6204795.cpp -o C:\\Users\\sidrah\\The_Real_OJ\\Compiler\\outputs\\4b9ae81a-e2f6-4a6a-bace-0c2ac6204795.exe && cd C:\\Users\\sidrah\\The_Real_OJ\\Compiler\\outputs && ./4b9ae81a-e2f6-4a6a-bace-0c2ac6204795.exe'       
+  },
+  stderr: ''
+}
+TypeError: Cannot destructure property 'code' of 'req.body' as it is undefined.     
+    at C:\Users\sidrah\The_Real_OJ\Compiler\index.js:16:13
+    at Layer.handleRequest (C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\router\lib\layer.js:152:17)       
+    at next (C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\router\lib\layer.js:152:17)       
+    at C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\router\index.js:295:15     
+    at processParams (C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\router\index.js:582:12)
+    at next (C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\router\index.js:291:5)
+    at urlencodedParser (C:\Users\sidrah\The_Real_OJ\Compiler\node_modules\body-parser\lib\types\urlencoded.js:77:7)
+
+
+Problem 1: Windows doesn’t recognize ./exe-file syntax
+Error:
+'.' is not recognized as an internal or external command
+This happens in Windows CMD, where:
+./someExecutable.exe
+does not work.
+
+✅ Fix:
+In your executeCpp.js, modify the exec command like this:
+
+const command = `g++ ${filePath} -o ${outpath} && "${outpath}"`;
+So update:
+
+
+exec(`g++ ${filePath} -o ${outpath} && cd ${outputPath} && ./${jobId}.exe`, ...)
+to:
+
+exec(`g++ ${filePath} -o ${outpath} && "${outpath}"`, (error, stdout, stderr) => {
+    if (error) return reject({ error, stderr });
+    if (stderr) return reject({ stderr });
+    resolve(stdout);
+});
+✅ This makes it portable and Windows-compatible.
+
