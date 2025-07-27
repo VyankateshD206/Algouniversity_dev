@@ -26,22 +26,6 @@ It lets users solve coding problems, run and submit code in a sandboxed environm
 
 ---
 
-## 📸 Screenshots
-
-| 🏠 Home Page               | 📝 Code Editor               |
-| -------------------------- | ---------------------------- |
-| ![Home](screenshots/1.png) | ![Editor](screenshots/3.png) |
-
-| 🏆 Leaderboard                    | 👤 Profile Page               |
-| --------------------------------- | ----------------------------- |
-| ![Leaderboard](screenshots/4.png) | ![Profile](screenshots/5.png) |
-
-| 🧑‍💼 Admin Dashboard          |     |
-| --------------------------- | --- |
-| ![Admin](screenshots/6.png) |     |
-
----
-
 ## 🚀 Quick Start
 
 ### Prerequisites
