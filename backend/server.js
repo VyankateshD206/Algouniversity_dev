@@ -53,12 +53,12 @@ app.get("/",(req,res)=>{
     res.send("This server is working");
 })
 
-app.use("/api/v1/auth",authRoutes);
-app.use("/api/v1/user",userRoutes);
-app.use("/api/v1/problem",problemRoutes);
-app.use("/api/v1/submission",submissionRoutes);
-app.use("/api/v1/contact", contactRoutes);
-app.use("/api/v1/ai",aiRoutes);
+app.use("/api/auth",authRoutes);
+app.use("/api/user",userRoutes);
+app.use("/api/problem",problemRoutes);
+app.use("/api/submission",submissionRoutes);
+app.use("/api/contact", contactRoutes);
+app.use("/api/ai",aiRoutes);
 
 app.use(globalErrorHandler);
 
