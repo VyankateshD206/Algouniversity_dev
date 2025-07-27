@@ -1,20 +1,37 @@
-# Dependencies
+# My Resources
+Resources/
+
+# Node modules
 node_modules/
-
-# Environment variables
-.env
-
-# Certificates
-*.key
-*.cert
 
 # Logs
 *.log
 
-# System files
-.DS_Store
-Thumbs.db
+# Build output
+/build
+/dist
 
-# folders
-/Under_concepts
-/z_questions
+# OS-specific
+.DS_Store
+
+# IDEsx
+.vscode/
+.idea/
+
+# React-specific
+frontend/node_modules/
+frontend/build/
+
+# Backend-specific
+backend/node_modules/
+
+# .env
+frontend/.env
+backend/.env
+
+compiler/node_modules/
+compiler/.env
+compiler/utils/codes
+compiler/utils/executeCode/outputs
+
+/keys

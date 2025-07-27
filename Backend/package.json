@@ -1,23 +1,36 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "This is the backend application for my Online Judge Website ",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon ./server.js",
+    "test": "npm run dev"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyushGupta3900/SummerProject.git"
+  },
+  "author": "Ayush Gupta",
   "license": "ISC",
-  "description": "",
+  "bugs": {
+    "url": "https://github.com/AyushGupta3900/SummerProject/issues"
+  },
+  "homepage": "https://github.com/AyushGupta3900/SummerProject#readme",
   "dependencies": {
+    "amqplib": "^0.10.8",
     "axios": "^1.10.0",
-    "bcryptjs": "^3.0.2",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "ioredis": "^5.6.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.1.10"
   }
 }
