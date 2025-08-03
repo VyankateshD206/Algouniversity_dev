@@ -1,8 +1,8 @@
-# 💻 ByteForge — MERN Online Judge Platform
+# 💻 CodeJudge — MERN Online Judge Platform
 
 > 🚀 **A scalable, full-stack DSA practice & coding platform, powered by MERN, Docker & AWS.**
 
-ByteForge is a modern, feature-rich **Data Structures & Algorithms (DSA) practice platform** built on the **MERN stack**, Docker, Redux Toolkit, and AWS.  
+CodeJudge is a modern, feature-rich **Data Structures & Algorithms (DSA) practice platform** built on the **MERN stack**, Docker, Redux Toolkit, and AWS.  
 It lets users solve coding problems, run and submit code in a sandboxed environment, track progress, view leaderboards — all with a blazing-fast, intuitive interface and a robust backend.
 
 ---
