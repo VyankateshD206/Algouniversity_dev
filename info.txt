@@ -1,0 +1,28 @@
+🛠️ Highlights
+Frontend: Vercel (React + Tailwind)
+
+Backend: Render (Node.js + MongoDB )
+
+Compiler: AWS EC2 Docker + Redis
+
+Storage: AWS S3 for test cases & assets
+
+Queue: Redis + Bull for async code execution
+
+Secure Auth: Google OAuth with role-based access
+
+🧑‍💼 Admin & Problem Setter
+Admins can manage roles and users
+
+Setters can add/edit problems and test cases
+
+✨ Features
+🤖 CodeGenie: AI help with explanations & approach
+
+📊 Live Tracker: Real-time status updates
+
+🔐 Safe Execution: Sandbox via Docker with limits
+
+🛡️ Admin Login
+Username: abcd
+Password: 123456
